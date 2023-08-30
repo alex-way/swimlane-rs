@@ -1,0 +1,26 @@
+[package]
+name = "swimlane"
+version = "0.1.0"
+edition = "2021"
+exclude = ["**/tests/**", "**/json/**"]
+license = "MIT"
+keywords = ["swimlane", "api", "client"]
+categories = ["api-bindings"]
+description = "A Rust client for the Swimlane API"
+homepage = "https://github.com/alex-way/swimlane-rs"
+documentation = "https://github.com/alex-way/swimlane-rs"
+repository = "https://github.com/alex-way/swimlane-rs"
+readme = "readme.md"
+
+[dependencies]
+reqwest = { version = "0.11.18", features = ["json"] }
+tokio = { version = "1.32.0" }
+url = "2.4.0"
+serde = { version = "1.0.183", features = ["derive"] }
+thiserror = "1.0.47"
+chrono = { version = "0.4.26", features = ["serde"] }
+serde_json = "1.0.105"
+
+[dev-dependencies]
+tempfile = "3.7.1"
+httpmock = "0.6.8"
